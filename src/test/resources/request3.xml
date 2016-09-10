@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope
+xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<soap:Header>
+<digitalSignature xmlns="http://payment.beepayxp.jetinfosoft.ru">
+<signature>MvCm22LcVe/B2e9EG06g3R1wzww9LaCDqMPQV3xm6fcPKvuQXfyLKN5qYZ55oZSuDZ1O5uF3AjtZc8Sagl3ftg==</signature>
+</digitalSignature>
+</soap:Header>
+<soap:Body>
+<partnerBalanceRequest xmlns="http://payment.beepayxp.jetinfosoft.ru">
+<partnerId>1009</partnerId>
+<startDate>2015-09-06</startDate>
+<endDate>2015-09-08</endDate>
+</partnerBalanceRequest>
+</soap:Body>
+</soap:Envelope>

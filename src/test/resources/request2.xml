@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<partnerBalanceRequest xmlns="http://payment.beepayxp.jetinfosoft.ru">
+<partnerId>1009</partnerId>
+<startDate>2015-09-06</startDate>
+<endDate>2015-09-08</endDate>
+</partnerBalanceRequest>
