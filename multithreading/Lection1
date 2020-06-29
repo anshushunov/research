@@ -1,0 +1,15 @@
+Лекция 1
+https://www.youtube.com/watch?v=4YGqahTTWtQ&list=PLoij6udfBncgyV-7Y0lEh0EwfkpcAoBeK
+
+1. Устройство процессора
+    - Архитектура Фон Неймана
+    - pipelining
+        - CISC/RISK
+    - superscalar architecture
+    - out-of-order execution
+    - speculative execution
+    - branch prediction
+2. Прогресс
+    - Закон Мура
+    - Герб Саттер (https://i.stack.imgur.com/fRJgk.png)
+    - закон Амдала
