@@ -1,0 +1,35 @@
+Лекция 2
+
+https://www.youtube.com/watch?v=tCZ6jKgXAUI&list=PLoij6udfBncgyV-7Y0lEh0EwfkpcAoBeK&index=2
+
+Набор ссылок:
+https://habr.com/ru/company/golovachcourses/blog/215275/
+
+Disruptor и прочие фокусы: https://www.youtube.com/watch?v=IsGBA9KEtTM
+Disruptor: https://www.baeldung.com/lmax-disruptor-concurrency
+http://lmax-exchange.github.io/disruptor/files/Disruptor-1.0.pdf
+Роман Елизаров — Миллионы котировок в секунду на чистой Java:
+https://www.youtube.com/watch?v=Q-7y1u9kZV0
+
+3. Memory wall
+	- cache hierarchy (иерархия кешей, L1, L2, L3, RAM)
+	- cache coherence protocol (поддержание кешей в актуальном состоянии)
+	- SNP/NUMA
+4. Effects
+	- false sharing (два потока используют одну и туже кеш линию и мешают друг другу)
+	- memory padding (фейковые параметры для того чтобы разнести в разные кеш линии)
+	- cache miss
+	- cache polution
+	- context switch
+	- thread affinity
+
+What every programmer should know about memory:
+https://people.freebsd.org/~lstewart/articles/cpumemory.pdf
+
+L1 cache ~ 32 kb - ~ 3 cycles ~1ns (для инструкций и для данных, обычно два)
+L2 cache ~ 1 mb - ~ 12 cycles ~3ns
+L3 cache ~ 16 mb - ~ 38 cycles ~12ns
+
+RAM ~65ns
+
+Cache line == 64 byte, из памяти данные читаются кеш линиями
