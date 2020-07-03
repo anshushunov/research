@@ -1,15 +1,23 @@
-Лекция 2
+Лекция 1_1
 
 https://www.youtube.com/watch?v=tCZ6jKgXAUI&list=PLoij6udfBncgyV-7Y0lEh0EwfkpcAoBeK&index=2
 
 Набор ссылок:
 https://habr.com/ru/company/golovachcourses/blog/215275/
 
-Disruptor и прочие фокусы: https://www.youtube.com/watch?v=IsGBA9KEtTM
+Disruptor и прочие фокусы:
+https://www.youtube.com/watch?v=IsGBA9KEtTM
+
 Disruptor: https://www.baeldung.com/lmax-disruptor-concurrency
 http://lmax-exchange.github.io/disruptor/files/Disruptor-1.0.pdf
+
 Роман Елизаров — Миллионы котировок в секунду на чистой Java:
 https://www.youtube.com/watch?v=Q-7y1u9kZV0
+
+A Primer on Memory Consistency and Cache Coherence, Second Edition
+https://www.morganclaypool.com/doi/10.2200/S00962ED2V01Y201910CAC049
+First edition:
+https://github.com/tpn/pdfs/blob/master/A%20Primer%20on%20Memory%20Consistency%20and%20Cache%20Coherence%20(10.1.1.225.9278).pdf
 
 3. Memory wall
 	- cache hierarchy (иерархия кешей, L1, L2, L3, RAM)
