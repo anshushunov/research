@@ -1,0 +1,60 @@
+Лекция 2
+
+https://www.youtube.com/watch?v=V74P47N82Cs&list=PLoij6udfBncgyV-7Y0lEh0EwfkpcAoBeK&index=3
+
+Not hardware, but jmm
+    - hardware point of view
+    - jmm point of view
+
+JMM
+    - флаг должен быть volatile
+    - понятие о частичном порядке и happens-before
+        - program order
+        - happens-before edges
+        - start/join thread
+        - write-read volatile
+        - monitorenter/monitorexit
+    - final fields
+
+Double checked locking
+
+JLS 8:
+https://docs.oracle.com/javase/specs/jls/se8/html/jls-17.html
+
+function boolean R(Object ref1, Object ref2) { .. } - бинарное отношение для пар объектов
+Бинарное отношение - отношение нестрогого частичного порядка
+https://ru.wikipedia.org/wiki/%D0%9E%D1%82%D0%BD%D0%BE%D1%88%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BF%D0%BE%D1%80%D1%8F%D0%B4%D0%BA%D0%B0
+
+Полный порядок - для любых x и y (числа - целые, вещественные, дроби)
+    - либо х ==у
+    - либо xRy: x <= y
+    - либо yRx: y <= x
+
+Частичный порядок - для любых x и y
+    - либо х ==у
+    - либо xRy: x <= y
+    - либо yRx: y <= x
+    - не определено
+
+Для строк, строка x<= строки y в том случае если строка начинается со строки x
+(x - префикс для y)
+
+a <= ab
+a <= ac
+a ?? b
+
+Внутри потока - все события упорядочены, это полный порядок.
+Между событиями в двух потоках - частичный порядок.
+
+Happens-before edge как установить:
+    - запись и чтение из volatile переменной
+    - ...
+
+Литература:
+http://www.cs.umd.edu/~pugh/java/memoryModel/jsr-133-faq.html
+https://habr.com/ru/company/golovachcourses/blog/221133/
+http://gee.cs.oswego.edu/dl/jmm/cookbook.html
+
+TODO volatile vs cache coherence:
+https://stackoverflow.com/questions/43492181/does-volatile-keword-in-java-really-have-to-do-with-caches
+
