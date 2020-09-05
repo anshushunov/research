@@ -1,0 +1,31 @@
+Лекция 3
+Lecture #03. Hardware & Mathematics
+https://www.youtube.com/watch?v=JI-SdLQKgFM&list=PLoij6udfBncgyV-7Y0lEh0EwfkpcAoBeK&index=4
+
+17 глава jsl:
+https://docs.oracle.com/javase/specs/jls/se8/html/jls-17.html
+
+JSR 133
+https://www.cs.umd.edu/~pugh/java/memoryModel/jsr133.pdf
+
+Gallery of Processor Cache Effects
+http://igoro.com/archive/gallery-of-processor-cache-effects/
+
+roach motel jmm
+http://jeremymanson.blogspot.com/2007/05/roach-motels-and-java-memory-model.html
+https://shipilev.net/talks/jugru-Feb2014-jmm-pragmatics.pdf
+https://shipilev.net/blog/2014/jmm-pragmatics/
+
+JMM:
+http://tutorials.jenkov.com/java-concurrency/java-memory-model.html
+
+Гарантия happens-before = все стрелки от syncronized with + все стрелки от program order
+
+Какие случаи могут быть для установления happens-before:
+- Если один поток взял syncronized, освободил его и потом взял другой - то второй поток
+ гаратинтированно увидит все изменения первого потока. Ещё момент - фактически для синхронизации между потоками подобным образом
+ будут игнорироваться кеши. Поэтому syncronized могут быть медленными, не только изза взаимоного исключения, но и изза того что контексты полностью выгружются.
+- Аналогичная гарантия дается для volatile - запись в эту переменную в одном потоке и потом чтение из неё в другом позволяет увидеть все изменения из первого потока
+
+Семантика final поля:
+- Если помечаем поля final и не позволяем никда утечь референсу на объект из контруктора - то после выполнения конструктора все поля будут корректно инициализированы

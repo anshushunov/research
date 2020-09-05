@@ -1,0 +1,23 @@
+Лекция 8
+https://www.youtube.com/watch?v=hqRVz_4wCrc
+
+java 5 - java.util.concurrent
+java 7 - Fork/Join (recursive parralelism)
+java 8 - Stream API
+
+- static methods
+- default methods
+- method references
+
+- lambdas
+- functional package
+
+- Steam API
+
+Скачать:
+Domain Specific Languages. by Martin Fowler, with Rebecca Parsons. 2010
+
+Статья с примерами StreamAPI:
+https://cr.openjdk.java.net/~briangoetz/lambda/lambda-libraries-final.html
+
+28:44

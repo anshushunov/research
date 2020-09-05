@@ -1,0 +1,25 @@
+Лекция 4
+
+https://www.youtube.com/watch?v=U0i7c7wEyN8&list=PLoij6udfBncgyV-7Y0lEh0EwfkpcAoBeK&index=5
+
+У Thread есть метод для проверки - захватил он лок или нет.
+
+Monitor
+    - syncronized
+        - mutex (взаимное исключение)
+        - атомарность
+        - jmm: happens-before (monitorenter -> monitorexit)
+
+OS Sheduler (TODO READ)
+    - вытесняющие (большинство современных систем)
+    - кооперативный (системы реального времени)
+
+Скедулер каждую 1 мс вызывает апаратное прерывание и прерывает выполнение и смотрит на потоки которые нужно загрузить.
+
+Отличие процесса от потока - два процесса не могут разделять память.
+У потоков общая память.
+
+SEDA Architecture
+https://github.com/tpn/pdfs/blob/master/SEDA%20-%20An%20Architecture%20for%20Well-Conditioned,%20Scalable%20Internet%20Services%20(seda-sosp01).pdf
+
+https://github.com/mdwelsh/mdwelsh.github.io/blob/master/papers/quals-seda.pdf

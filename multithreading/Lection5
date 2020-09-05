@@ -1,0 +1,50 @@
+Лекция 5
+https://www.youtube.com/watch?v=HlbQfiASYAI&list=PLoij6udfBncgyV-7Y0lEh0EwfkpcAoBeK&index=6
+
+java.util.cocurrent:
+    - queue
+    - collections
+    - synchnozers
+    - atomics
+
+"In software engineering, a spinlock is a lock which causes a thread trying to acquire it to simply wait in a loop ("spin") while repeatedly checking if the lock is available."
+https://en.wikipedia.org/wiki/Spinlock
+
+******************
+ArrayBlockingQueue
+******************
+http://fuseyism.com/classpath/doc/java/util/concurrent/ArrayBlockingQueue-source.html
+На основе циклического буфера.
+Два указателя, для того чтобы положить и для того чтобы читать:
+  59:     /** items index for next take, poll or remove */
+  60:     private int takeIndex;
+  61:     /** items index for next put, offer, or add. */
+  62:     private int putIndex;
+
+Более правильный путь - переопределение Runnable, а не пихать thread.
+
+/////////////////////////////////////////////////////////////////////
+Две главные книги:
+The Art of Multiprocessor Programming  2nd Edition - 1 сентрября 2020 выходит второе издание
+Java Concurrency in Practice
+/////////////////////////////////////////////////////////////////////
+
+ReentrantLock (Lock) позволяет сделать более сложные вещи, чем обычный монитор.
+1) Можно сделать так (lock-unlock независимы):
+lock1.lock();
+lock2.lock();
+lock1.unlock();
+lock2.unlock();
+
+На syncronized - нельзя, потому что синтаксически открытие и закрытие связаны.
+
+2) Fairness (в отличии от waitset/blockedset на  обычном мониторе если fairness=true то кто дольше всех ждал тот и
+ будет пробужен, а не рандомный).
+
+3) Можно понять занят ли лок и можно вызвать его лок с таймаутом.
+
+4) С помощью Condition может быть несколько пар waitset-blockedset.
+
+
+
+

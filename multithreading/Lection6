@@ -1,0 +1,50 @@
+Лекция 6.
+
+https://www.youtube.com/watch?v=9Ij-Mu7VJ8I&list=PLoij6udfBncgyV-7Y0lEh0EwfkpcAoBeK&index=8
+
+-------------------------------------------------------------------
+ReentrantLock (Lock) позволяет сделать более сложные вещи, чем обычный монитор.
+1) Можно сделать так (lock-unlock независимы):
+lock1.lock();
+lock2.lock();
+lock1.unlock();
+lock2.unlock();
+
+На syncronized - нельзя, потому что синтаксически открытие и закрытие связаны.
+
+2) Fairness (в отличии от waitset/blockedset на  обычном мониторе если fairness=true то кто дольше всех ждал тот и
+ будет пробужен, а не рандомный).
+
+3) Можно понять занят ли лок и можно вызвать его лок с таймаутом.
+
+4) С помощью Condition может быть несколько пар waitset-blockedset.
+-----------------------------------------------------------------------
+
+Если брать syncronized - то не гарантируется fairness. Это важно в системах реального времени, может оказаться что
+какой-то поток будет долго сидеть в blockedset.
+
+
+AbstractQueuedSynchronizer - основа для всего java.util.concurrent
+http://gee.cs.oswego.edu/dl/papers/aqs.pdf
+
+ReadWriteLock - две блокировки, на чтение и на запись.
+
+HashTable -> HashMap
+Vector -> ArrayList
+StringBuffer -> StringBuilder
+
+Варианты сделать защищенную мапу:
+1) HashTable (все методы синхронизированы, медленно и в 99.99% случаев не нужно). Берется лок на всю мапу.
+2) Можно мапу через Collection.syncronizedMap декорировать мапу. Берется лок на всю мапу.
+3) ConcurrentHashMap. Берется лок на группу бакетов, а можно и на бакет. Указывается через ConcurrencyFactor
+
+https://openjdk.java.net/jeps/143
+
+В read-write блокировке:
+- Много потоков могут взять read lock
+- Только один поток может взять write блокировку
+- Устанавливается happens-before:
+-- W-exit -> W-enter = happens-before
+-- W-exit -> R-enter = happens-before
+-- R-exit -> E-enter = nothing
+

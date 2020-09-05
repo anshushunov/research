@@ -1,0 +1,16 @@
+Лекция 9
+https://www.youtube.com/watch?v=D4CScx_4xUg
+
+Для всяких a, b, c: (a # b) # c == a # (b # c) = # является ассоциативным оператором
+Ассоциативные операторы:
++
+*
+min
+max
+
+Неассоциативные
+-
+/
+mean
+
+https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html

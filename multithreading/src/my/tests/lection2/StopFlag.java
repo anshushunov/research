@@ -10,7 +10,9 @@ public class StopFlag {
             public void run() {
                 while (run) {
                     System.out.println("hello");
-                    System.out.println(data); // 1!!!
+                    System.out.println(data); // 1 в последний проход, потому что сделали
+                    // запись и чтение В ТУ ЖЕ САМУЮ volatile перменную, т.е. она перекидывает
+                    // весь контекст, в т.ч. запись в data
                 }
             }
         }).start();

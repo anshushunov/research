@@ -1,0 +1,51 @@
+Лекция 7
+https://www.youtube.com/watch?v=Mnid3x23idw&list=PLoij6udfBncgyV-7Y0lEh0EwfkpcAoBeK&index=9
+
+= Threads + locks
+= Parralel Streams (Java 8)
+= Actors (Akka, Erlang)
+= STM Software Transactional Memory (Multiverse)
+= Persistent Data Structures
+
+java.util.concurrent
+    Thread pool
+        Runnable, Executor
+        ExecutorService, Callable, Future, ThreadPoolExecutor
+        SheduledExecutorService, ScheduledThreadPoolExecutor, Timer
+        Executors
+        ThreadFactory
+    Collection
+        BlockingQueue
+            ArrayBlockingQueue
+            LinkedBlockingQueue
+            LinkedBlockingDeque
+            SynchronousQueue
+            TransaferQueue, LinkedTransferQueue
+            DelayQueue, PriorityBlockingQueue
+        Copy-on-write
+            CopyOnWriteArrayList
+            CopyOnWriteArraySet
+        Map
+            ConcurrentMap, ConcurrentHashMap
+            ConcurrentNavigableMap, ConcurrentSkipListMap, ConcurrentSkipListSet
+        ConcurrentLinkedDeque, ConcurrentLinkedQueue
+
+    Synchronizers
+        syncronized + wait()/notify()/notifyAll()
+        Lock + Condition + ReentrantLock
+        ReadWriteLock, ReadWriteReentrantLock
+        Semaphore
+        CountDownLatch
+        CyclicBarrier
+        Exchanger
+        StampedLock
+        AQS, LockSupport
+        Phaser
+    Atomics / CAS (Compare-and-swap)
+        Atomic: Boolean, Integer, Long, Reference
+        AtomicArray: Integer, Long, Reference
+        AtomicFieldUpdater: Integer, Long, Reference
+        AtomicMarkableReference, AtomicStampedReference
+        Striped64, DoubleAccumulator, DoubleAdder, LongAccumulator, LongAdder
+
+Why thread primitive is depricated? - статья, прочитать.
